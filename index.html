@@ -19,14 +19,33 @@
       </button>
     </div>
     <div class="flex-1 text-center">
-      <a class="btn btn-ghost text-xl">MyProfile</a>
-    </div>
-    <label class="flex cursor-pointer gap-2">
-      <span class="label-text">Dark</span>
-      <input type="checkbox" class="toggle theme-controller" aria-label="Toggle dark and light theme" onchange="toggleTheme()" />
-      <span class="label-text">Light</span>
+      <a class="btn btn-outline btn-primary text-xl border-2 border-primary hover:bg-primary hover:text-white transition duration-300 ease-in-out rounded-lg">
+        MyProfile
+      </a>
+    </div>    
+    <label class="swap swap-rotate">
+      <!-- this hidden checkbox controls the state -->
+      <input type="checkbox" class="theme-controller join-item" value="retro" />
+    
+      <!-- sun icon -->
+      <svg
+        class="swap-off h-10 w-10 fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24">
+        <path
+          d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+      </svg>
+    
+      <!-- moon icon -->
+      <svg
+        class="swap-on h-10 w-10 fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24">
+        <path
+          d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+      </svg>
     </label>
-  </div>
+  </div> 
 
   <!-- Main Content (Profile + Projects) -->
   <main class="flex-grow">
@@ -39,143 +58,171 @@
           </div>
         </div>
         <div>
-          <h1 class="text-3xl md:text-4xl font-medium mb-2">Nuntawat Seahuam</h1>
-          <p class="text-lg md:text-xl">ID : 653450510-0</p>
-          <p class="text-lg md:text-xl">E-mail : nanthawat.s@kkumail.com</p>
-          <p class="text-lg md:text-xl mb-3">Major : Computer and Information Science</p>
-          <div class="badge badge-warning">CS</div>
-          <div class="badge badge-info">Junior</div>
-          <div class="badge badge-error">KKU</div>
-          <div class="badge badge-success">!Sleep</div>
+          <h1 class="text-3xl md:text-4xl font-medium mb-2">Nuntawat Seahuam <span class="rating gap-1">
+              <input type="radio" name="rating-3" class="mask mask-heart bg-red-400"/>
+              <input type="radio" name="rating-3" class="mask mask-heart bg-orange-400" />
+              <input type="radio" name="rating-3" class="mask mask-heart bg-yellow-400"/>
+              <input type="radio" name="rating-3" class="mask mask-heart bg-lime-400" checked="checked" />
+              <input type="radio" name="rating-3" class="mask mask-heart bg-green-400"/>
+          </span>
+          </h1>
+            <p class="text-lg md:text-xl">ID : 653450510-0</p>
+            <p class="text-lg md:text-xl">E-mail : nanthawat.s@kkumail.com</p>
+            <p class="text-lg md:text-xl mb-3">Major : Computer and Information Science</p>
+            <div class="badge bg-blue-500 text-white">CS</div>
+            <div class="badge bg-pink-400 text-white">Junior</div>
+            <div class="badge bg-red-400 text-white">KKU</div>
+            <div class="badge bg-green-600 text-white">!Look at Netfilx</div>
         </div>
-      </div>
-      <div class="rating">
-        <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" aria-label="1 star" />
-        <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" aria-label="2 stars" />
-        <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" aria-label="3 stars" />
-        <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" checked="checked" aria-label="4 stars" />
-        <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" aria-label="5 stars" />
       </div>
     </div>
 
     <!-- Projects Section -->
     <div class="flex w-full flex-col border-opacity-50">
       <div class="divider divider-info text-2xl">MyProject</div>
-  
-      <div class="flex justify-center flex-wrap gap-4">
-  
-        <div class="card bg-base-100 image-full w-72 md:w-80 lg:w-72 shadow-xl">
+
+      <div class="flex justify-center flex-wrap gap-6"> <!-- Increased gap here -->
+        
+        <div class="card bg-base-100 image-full w-80 md:w-96 lg:w-80 shadow-xl"> <!-- Increased width -->
           <figure>
             <img src="pokemon.gif" alt="PokemonXD" />
           </figure>
           <div class="card-body">
-            <h2 class="text-2xl card-title">PokemonXD</h2>
-            <p>Final Project in OOP</p>
-            <a href="https://github.com/aniwatOK/Pokemon" target="_blank" rel="noopener">
+            <h2 class="text-2xl card-title">Pokemon</h2>
+            <p>Final Project OOP</p>
+            <a href="https://github.com/nuntawatt/Final-OOP-Project.git" target="_blank" rel="noopener">
               <div class="card-actions justify-end">
                 <button class="btn btn-secondary">Repositories</button>
               </div>
             </a>
           </div>
         </div>
-  
-        <div class="card bg-base-100 image-full w-72 md:w-80 lg:w-72 shadow-xl">
+
+        <div class="card bg-base-100 image-full w-80 md:w-96 lg:w-80 shadow-xl"> <!-- Increased width -->
           <figure>
-            <img src="/image/duck.gif" alt="PokedexLab" />
+            <img src="pikachu.gif" alt="PokedexLab" />
           </figure>
           <div class="card-body">
             <h2 class="text-2xl card-title">PokedexLab</h2>
             <p>Front-End</p>
             <div class="card-actions justify-end">
-              <a href="https://aniwatok.github.io/Pokedex/" target="_blank" rel="noopener">
+              <a href="https://nuntawatt.github.io/todoapp.github.io/pokedex/details/index.html" target="_blank" rel="noopener">
                 <button class="btn btn-primary">Web</button>
               </a>
-              <a href="https://github.com/aniwatOK/Pokedex.git" target="_blank" rel="noopener">
+              <a href="https://github.com/nuntawatt/todoapp.github.io.git" target="_blank" rel="noopener">
                 <button class="btn btn-secondary">Repositories</button>
               </a>
             </div>
           </div>
         </div>
-  
-        <div class="card bg-base-100 image-full w-72 md:w-80 lg:w-72 shadow-xl">
+
+        <div class="card bg-base-100 image-full w-80 md:w-96 lg:w-80 shadow-xl"> <!-- Increased width -->
           <figure>
-            <img src="/image/chair.gif" alt="Weather" />
+            <img src="pica.gif" alt="Weather" />
           </figure>
           <div class="card-body">
             <h2 class="text-2xl card-title">Weather</h2>
             <p>Front-End</p>
             <div class="card-actions justify-end">
-              <a href="https://aniwatok.github.io/weather/" target="_blank" rel="noopener">
+              <a href="https://nuntawatt.github.io/weathe/" target="_blank" rel="noopener">
                 <button class="btn btn-primary">Web</button>
               </a>
-              <a href="https://github.com/aniwatOK/weather.git" target="_blank" rel="noopener">
+              <a href="https://github.com/nuntawatt/weathe.git" target="_blank" rel="noopener">
                 <button class="btn btn-secondary">Repositories</button>
               </a>
             </div>
           </div>
         </div>
-  
-        <div class="card bg-base-100 image-full w-72 md:w-80 lg:w-72 shadow-xl">
+
+        <div class="card bg-base-100 image-full w-80 md:w-96 lg:w-80 shadow-xl"> <!-- Increased width -->
           <figure>
-            <img src="/image/pika.gif" alt="PokeNext" />
+            <img src="pikachu_Haki.gif" alt="Pokemon NextJS" />
           </figure>
           <div class="card-body">
-            <h2 class="text-2xl card-title">PokeNext</h2>
+            <h2 class="text-2xl card-title">Pokemon NextJS</h2>
             <p>Front-End</p>
             <div class="card-actions justify-end">
-              <a href="https://lab01s.vercel.app/" target="_blank" rel="noopener">
+              <a href="https://fontend-lab.vercel.app/" target="_blank" rel="noopener">
                 <button class="btn btn-primary">Web</button>
               </a>
-              <a href="https://github.com/aniwatOK/lab01s.git" target="_blank" rel="noopener">
+              <a href="https://github.com/nuntawatt/Fontend_Lab.git" target="_blank" rel="noopener">
                 <button class="btn btn-secondary">Repositories</button>
               </a>
             </div>
           </div>
         </div>
-  
+
+        <div class="card bg-base-100 image-full w-80 md:w-96 lg:w-80 shadow-xl"> <!-- Increased width -->
+          <figure>
+            <img src="pica_energy.gif" alt="NextJS Todo Crud" />
+          </figure>
+          <div class="card-body">
+            <h2 class="text-2xl card-title">NextJS Todo Crud</h2>
+            <p>Front-End</p>
+            <div class="card-actions justify-end">
+              <a href="https://github.com/nuntawatt/Fontend_Lab.git" target="_blank" rel="noopener">
+                <button class="btn btn-secondary">Repositories</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
-  
+      
       <div class="card bg-base rounded-box grid h-10 place-items-center"></div>
     </div>
 
-      <div class="card bg-base rounded-box grid h-10 place-items-center"></div>
+    <div class="card bg-base rounded-box grid h-10 place-items-center"></div>
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer bg-neutral text-neutral-content p-10">
-    <aside>
-      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="22" y1="12" x2="2" y2="12"></line>
-        <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
-      </svg>
-      <p>
-        Moragon
-        <br />
-        By Nuntawat Seahuam
-        <br />
-        Copyright © 2024 - All right reserved
-      </p>
-    </aside>
-    <nav>
-      <h6 class="footer-title">Social</h6>
-      <div class="grid grid-flow-col gap-4">
-        <a href="https://github.com/nuntawatt" target="_blank" rel="noopener">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-5.06-1.615-5.06-1.615-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.84 1.234 1.84 1.234 1.07 1.834 2.809 1.304 3.495.997.108-.775.419-1.304.762-1.605-2.665-.305-5.467-1.332-5.467-5.931 0-1.31.467-2.381 1.234-3.221-.123-.305-.534-1.532.117-3.192 0 0 1.008-.322 3.301 1.23.958-.266 1.984-.399 3.004-.404 1.019.005 2.046.138 3.006.404 2.29-1.552 3.296-1.23 3.296-1.23.653 1.66.243 2.887.12 3.192.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.623-5.48 5.921.43.372.824 1.102.824 2.222v3.293c0 .319.19.694.8.576 4.765-1.591 8.196-6.09 8.196-11.387 0-6.627-5.373-12-12-12z"></path>
-          </svg>
-          GitHub Profile
-        </a>
-      </div>
-    </nav>
-  </footer>
+<!-- Footer -->
+<footer class="footer bg-neutral text-neutral-content p-10">
+  <aside class="flex items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="22" y1="12" x2="2" y2="12"></line>
+      <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+    </svg>
+    <p class="font-semibold text-lg ml-4">
+      Moragon &mdash; Designer
+      <br />
+      Crafted with Passion by Nuntawat Seahuam
+      <br />
+      © 2024 Moragon. All Rights Reserved.
+    </p>
+  </aside>   
+  <nav>
+    <h6 class="footer-title">Social</h6>
+    <div class="grid grid-flow-col gap-4">
+      <a href="https://github.com/nuntawatt" aria-label="GitHub Profile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 22.027v-2.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 5.67a5.07 5.07 0 0 0-.09-3.74s-1.17-.37-3.84 1.42a13.14 13.14 0 0 0-6.14 0C7.26 1.56 6.09 1.93 6.09 1.93a5.07 5.07 0 0 0-.09 3.74A5.44 5.44 0 0 0 4.5 9.55c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 0 0-.94 2.56v2.89"></path>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/nuntawat_morgorn/" aria-label="Instagram Profile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7.5 2H16.5C18.433 2 20 3.567 20 5.5V18.5C20 20.433 18.433 22 16.5 22H7.5C5.567 22 4 20.433 4 18.5V5.5C4 3.567 5.567 2 7.5 2Z"></path>
+          <path d="M12 9.5C10.014 9.5 8.5 11.014 8.5 13C8.5 14.986 10.014 16.5 12 16.5C13.986 16.5 15.5 14.986 15.5 13C15.5 11.014 13.986 9.5 12 9.5Z"></path>
+          <path d="M16.5 7.5C16.5 7.224 16.776 7 17 7C17.224 7 17.5 7.224 17.5 7.5C17.5 7.776 17.224 8 17 8C16.776 8 16.5 7.776 16.5 7.5Z"></path>
+        </svg>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100006113161979" aria-label="LinkedIn Profile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+        </svg>
+      </a>
+    </div>
+  </nav>  
+</footer>
 
-  <script>
-    function toggleTheme() {
-      const root = document.documentElement;
-      const isDarkMode = root.getAttribute('data-theme') === 'dark';
-      root.setAttribute('data-theme', isDarkMode ? 'cupcake' : 'dark');
-    }
-  </script>
+<script>
+  function toggleTheme() {
+    let currentTheme = document.documentElement.getAttribute('data-theme');
+    let newTheme = currentTheme === 'cupcake' ? 'dark' : 'cupcake';
+    document.documentElement.setAttribute('data-theme', newTheme);
+  }
+</script>
+
+
 </body>
 </html>
