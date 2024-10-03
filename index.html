@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <title>MyProfile</title>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
   <!-- Navbar -->
   <div class="navbar bg-base-100">
@@ -28,113 +28,119 @@
     </label>
   </div>
 
-  <!-- Profile Section -->
-  <div class="flex justify-center mb-14 m-5 px-4 md:px-10 lg:px-56 py-2 rounded-2xl">
-    <div class="flex items-center">
-      <div class="avatar online mr-4">
-        <div class="ring-primary ring-offset-base-100 max-w-56 rounded-full ring ring-offset-2">
-          <img src="img.jpg" alt="Profile picture of Nuntawat Seahuam" />
+  <!-- Main Content (Profile + Projects) -->
+  <main class="flex-grow">
+    <!-- Profile Section -->
+    <div class="flex justify-center mb-14 m-5 px-4 md:px-10 lg:px-56 py-2 rounded-2xl">
+      <div class="flex items-center">
+        <div class="avatar online mr-4">
+          <div class="ring-primary ring-offset-base-100 max-w-56 rounded-full ring ring-offset-2">
+            <img src="img.jpg" alt="Profile picture of Nuntawat Seahuam" />
+          </div>
+        </div>
+        <div>
+          <h1 class="text-3xl md:text-4xl font-medium mb-2">Nuntawat Seahuam</h1>
+          <p class="text-lg md:text-xl">ID : 653450510-0</p>
+          <p class="text-lg md:text-xl">E-mail : nanthawat.s@kkumail.com</p>
+          <p class="text-lg md:text-xl mb-3">Major : Computer and Information Science</p>
+          <div class="badge badge-warning">CS</div>
+          <div class="badge badge-info">Junior</div>
+          <div class="badge badge-error">KKU</div>
+          <div class="badge badge-success">!Sleep</div>
         </div>
       </div>
-      <div>
-        <h1 class="text-3xl md:text-4xl font-medium mb-2">Nuntawat Seahuam</h1>
-        <p class="text-lg md:text-xl">ID : 653450510-0</p>
-        <p class="text-lg md:text-xl">E-mail : nanthawat.s@kkumail.com</p>
-        <p class="text-lg md:text-xl mb-3">Major : Computer and Information Science</p>
-        <div class="badge badge-warning">CS</div>
-        <div class="badge badge-info">Junior</div>
-        <div class="badge badge-error">KKU</div>
-        <div class="badge badge-success">!Sleep</div>
+      <div class="rating">
+        <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" aria-label="1 star" />
+        <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" aria-label="2 stars" />
+        <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" aria-label="3 stars" />
+        <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" checked="checked" aria-label="4 stars" />
+        <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" aria-label="5 stars" />
       </div>
     </div>
-    <div class="rating">
-      <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" aria-label="1 star" />
-      <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" aria-label="2 stars" />
-      <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" aria-label="3 stars" />
-      <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" checked="checked" aria-label="4 stars" />
-      <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" aria-label="5 stars" />
-    </div>
-  </div>
 
-  <!-- Projects Section -->
-  <div class="flex w-full flex-col border-opacity-50">
-    <div class="divider divider-info text-2xl">MyProject</div>
-
-    <div class="flex justify-center flex-wrap gap-4">
-
-      <div class="card bg-base-100 image-full w-72 md:w-80 lg:w-72 shadow-xl">
-        <figure>
-          <img src="/image/pokexd.gif" alt="PokemonXD" />
-        </figure>
-        <div class="card-body">
-          <h2 class="text-2xl card-title">PokemonXD</h2>
-          <p>Final Project in OOP</p>
-          <a href="https://github.com/aniwatOK/Pokemon" target="_blank" rel="noopener">
+    <!-- Projects Section -->
+    <div class="flex w-full flex-col border-opacity-50">
+      <div class="divider divider-info text-2xl">MyProject</div>
+  
+      <div class="flex justify-center flex-wrap gap-4">
+  
+        <div class="card bg-base-100 image-full w-72 md:w-80 lg:w-72 shadow-xl">
+          <figure>
+            <img src="pokemon.gif" alt="PokemonXD" />
+          </figure>
+          <div class="card-body">
+            <h2 class="text-2xl card-title">PokemonXD</h2>
+            <p>Final Project in OOP</p>
+            <a href="https://github.com/aniwatOK/Pokemon" target="_blank" rel="noopener">
+              <div class="card-actions justify-end">
+                <button class="btn btn-secondary">Repositories</button>
+              </div>
+            </a>
+          </div>
+        </div>
+  
+        <div class="card bg-base-100 image-full w-72 md:w-80 lg:w-72 shadow-xl">
+          <figure>
+            <img src="/image/duck.gif" alt="PokedexLab" />
+          </figure>
+          <div class="card-body">
+            <h2 class="text-2xl card-title">PokedexLab</h2>
+            <p>Front-End</p>
             <div class="card-actions justify-end">
-              <button class="btn btn-secondary">Repositories</button>
+              <a href="https://aniwatok.github.io/Pokedex/" target="_blank" rel="noopener">
+                <button class="btn btn-primary">Web</button>
+              </a>
+              <a href="https://github.com/aniwatOK/Pokedex.git" target="_blank" rel="noopener">
+                <button class="btn btn-secondary">Repositories</button>
+              </a>
             </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="card bg-base-100 image-full w-72 md:w-80 lg:w-72 shadow-xl">
-        <figure>
-          <img src="/image/duck.gif" alt="PokedexLab" />
-        </figure>
-        <div class="card-body">
-          <h2 class="text-2xl card-title">PokedexLab</h2>
-          <p>Front-End</p>
-          <div class="card-actions justify-end">
-            <a href="https://aniwatok.github.io/Pokedex/" target="_blank" rel="noopener">
-              <button class="btn btn-primary">Web</button>
-            </a>
-            <a href="https://github.com/aniwatOK/Pokedex.git" target="_blank" rel="noopener">
-              <button class="btn btn-secondary">Repositories</button>
-            </a>
           </div>
         </div>
-      </div>
-
-      <div class="card bg-base-100 image-full w-72 md:w-80 lg:w-72 shadow-xl">
-        <figure>
-          <img src="/image/chair.gif" alt="Weather" />
-        </figure>
-        <div class="card-body">
-          <h2 class="text-2xl card-title">Weather</h2>
-          <p>Front-End</p>
-          <div class="card-actions justify-end">
-            <a href="https://aniwatok.github.io/weather/" target="_blank" rel="noopener">
-              <button class="btn btn-primary">Web</button>
-            </a>
-            <a href="https://github.com/aniwatOK/weather.git" target="_blank" rel="noopener">
-              <button class="btn btn-secondary">Repositories</button>
-            </a>
+  
+        <div class="card bg-base-100 image-full w-72 md:w-80 lg:w-72 shadow-xl">
+          <figure>
+            <img src="/image/chair.gif" alt="Weather" />
+          </figure>
+          <div class="card-body">
+            <h2 class="text-2xl card-title">Weather</h2>
+            <p>Front-End</p>
+            <div class="card-actions justify-end">
+              <a href="https://aniwatok.github.io/weather/" target="_blank" rel="noopener">
+                <button class="btn btn-primary">Web</button>
+              </a>
+              <a href="https://github.com/aniwatOK/weather.git" target="_blank" rel="noopener">
+                <button class="btn btn-secondary">Repositories</button>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="card bg-base-100 image-full w-72 md:w-80 lg:w-72 shadow-xl">
-        <figure>
-          <img src="/image/pika.gif" alt="PokeNext" />
-        </figure>
-        <div class="card-body">
-          <h2 class="text-2xl card-title">PokeNext</h2>
-          <p>Front-End</p>
-          <div class="card-actions justify-end">
-            <a href="https://lab01s.vercel.app/" target="_blank" rel="noopener">
-              <button class="btn btn-primary">Web</button>
-            </a>
-            <a href="https://github.com/aniwatOK/lab01s.git" target="_blank" rel="noopener">
-              <button class="btn btn-secondary">Repositories</button>
-            </a>
+  
+        <div class="card bg-base-100 image-full w-72 md:w-80 lg:w-72 shadow-xl">
+          <figure>
+            <img src="/image/pika.gif" alt="PokeNext" />
+          </figure>
+          <div class="card-body">
+            <h2 class="text-2xl card-title">PokeNext</h2>
+            <p>Front-End</p>
+            <div class="card-actions justify-end">
+              <a href="https://lab01s.vercel.app/" target="_blank" rel="noopener">
+                <button class="btn btn-primary">Web</button>
+              </a>
+              <a href="https://github.com/aniwatOK/lab01s.git" target="_blank" rel="noopener">
+                <button class="btn btn-secondary">Repositories</button>
+              </a>
+            </div>
           </div>
         </div>
+  
       </div>
-
+  
+      <div class="card bg-base rounded-box grid h-10 place-items-center"></div>
     </div>
 
-    <div class="card bg-base rounded-box grid h-10 place-items-center"></div>
-  </div>
+      <div class="card bg-base rounded-box grid h-10 place-items-center"></div>
+    </div>
+  </main>
 
   <!-- Footer -->
   <footer class="footer bg-neutral text-neutral-content p-10">
@@ -155,24 +161,20 @@
       <h6 class="footer-title">Social</h6>
       <div class="grid grid-flow-col gap-4">
         <a href="https://github.com/nuntawatt" target="_blank" rel="noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-5.06-1.615-5.06-1.615-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.84 1.234 1.84 1.234 1.07 1.834 2.809 1.304 3.495.997.108-.775.419-1.304.762-1.605-2.665-.305-5.467-1.332-5.467-5.931 0-1.31.467-2.381 1.234-3.221-.123-.305-.534-1.532.117-3.192 0 0 1.008-.322 3.301 1.23.958-.266 1.984-.399 3.004-.404 1.019.005 2.046.138 3.006.404 2.29-1.552 3.296-1.23 3.296-1.23.653 1.66.243 2.887.12 3.192.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.623-5.48 5.921.43.372.824 1.102.824 2.222v3.293c0 .319.19.694.8.576 4.765-1.591 8.196-6.09 8.196-11.387 0-6.627-5.373-12-12-12z"></path>
-            </svg>
-            GitHub Profile
-          </a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-5.06-1.615-5.06-1.615-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.84 1.234 1.84 1.234 1.07 1.834 2.809 1.304 3.495.997.108-.775.419-1.304.762-1.605-2.665-.305-5.467-1.332-5.467-5.931 0-1.31.467-2.381 1.234-3.221-.123-.305-.534-1.532.117-3.192 0 0 1.008-.322 3.301 1.23.958-.266 1.984-.399 3.004-.404 1.019.005 2.046.138 3.006.404 2.29-1.552 3.296-1.23 3.296-1.23.653 1.66.243 2.887.12 3.192.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.623-5.48 5.921.43.372.824 1.102.824 2.222v3.293c0 .319.19.694.8.576 4.765-1.591 8.196-6.09 8.196-11.387 0-6.627-5.373-12-12-12z"></path>
+          </svg>
+          GitHub Profile
+        </a>
       </div>
     </nav>
   </footer>
 
   <script>
     function toggleTheme() {
-      const checkbox = document.querySelector(".theme-controller");
-      const htmlElement = document.querySelector("html");
-      if (checkbox.checked) {
-        htmlElement.setAttribute("data-theme", "dark");
-      } else {
-        htmlElement.setAttribute("data-theme", "cupcake");
-      }
+      const root = document.documentElement;
+      const isDarkMode = root.getAttribute('data-theme') === 'dark';
+      root.setAttribute('data-theme', isDarkMode ? 'cupcake' : 'dark');
     }
   </script>
 </body>
